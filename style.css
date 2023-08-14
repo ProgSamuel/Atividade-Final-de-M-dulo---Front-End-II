@@ -284,3 +284,43 @@ i:hover {
   border-radius: 50%;
   background-color: var(--cor-secundaria);
 }
+
+
+    /* 320px — 480px: dispositivos móveis */
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      body {
+        font-size: 8pt;
+      }
+
+    /*   .personagem {
+        width: 100%;
+        height: 17em;
+        gap: 1em;
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+      .perssonagem img {
+        width: 10em;
+        height: 15em;
+      } */
+      
+     /*  .personagem-imagem {
+        width: 60%;
+        height: 100%;
+      } */
+    }
+
+
+    /* /* 481px — 768px: iPads, tablets */
+    @media screen and (min-width: 481px) and (max768px) {}
+    /* 769px — 1024px: telas pequenas, laptops */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {}
+    /* 1025px — 1200px: desktops, telas grandes */
+    @media screen and (min-width: 1025px) and (max-width: 1200px) {} 
+    
+
