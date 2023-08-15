@@ -23,9 +23,10 @@ body {
 }
 
 #api-link {
-  height: 3em;
-  width: 3em;
+  height: 2em;
+  width: 2em;
   margin: 0.5em;
+  margin-left: calc(100vw - 2.5em);
 }
 
 a {
