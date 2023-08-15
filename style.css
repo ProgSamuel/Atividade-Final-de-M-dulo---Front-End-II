@@ -10,12 +10,24 @@
   --cor-gray-darker: #696969;
   --cor-list: #0f54e969;
   --tamanho-fonte: 16px;
+  --cor-bege: lemonchiffon;
+  --cor-transparente: transparent;
 }
+
+/* modo dark
+background-color: var(--cor-gray-darker)
+.personagem => var(--cor-gray-drak2)
+color: var(--cor-quarta)
+verde => #0fb525
+--cor-secundaria =>   color:lemonchiffon;
+*/
+
 
 body {
   margin: 0;
   font-size: 12pt;
   min-height: 100vh;
+  background-color: transparent;
 }
 
 * {
@@ -121,6 +133,12 @@ button {
   background-color: transparent;
 }
 
+#resultadoDaBusca img {
+  width: 10em;
+  height: 10em;
+  border-radius: 0.5em;
+}
+
 #opcoesBusca {
   width: 100%;
 }
@@ -144,44 +162,6 @@ main img {
 #home {
   display: flex;
   flex-wrap: wrap;
-}
-
-.personagem-resposta {
-  display: flex;
-  flex-direction: row;
-  background-color: var(--cor-terciaria);
-  /* width: 90%;
-  height: 35em; */
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 1.2em;
-  justify-content: start;
-  border-radius: 1em;
-  box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.1);
-}
-.personagem-resposta-img {
-  margin: auto;
-  width: 10em;
-  border-radius: inherit;
-}
-
-.personagem-resposta-desc {
-  max-width: 70%;
-  margin: auto;
-  font-size: 0.8em;
-  font-weight: bold;
-}
-
-.personagem-resposta-desc h2 {
-  font-size: 1.9em;
-  font-weight: 800;
-  color: var(--cor-primaria);
-  text-align: center;
-  margin-top: -0.5em;
-}
-
-.personagem-resposta-desc p span {
-  color: var(--cor-secundaria);
 }
 
 .personagem {
@@ -320,14 +300,8 @@ i:hover {
   border-radius: 50%;
   background-color: var(--cor-secundaria);
 }
-@media (max-width: 820px) {
-  .personagem-resposta {
-    font-size: 11pt;
-    flex-direction: column;
-    gap: 1em;
-    border-radius: 10px;
-  }
-}
+
+
 
 @media (max-width: 480px) {
   body {
@@ -348,6 +322,11 @@ i:hover {
     flex-direction: column;
     width: 90%;
   }
+  #resultadoDaBusca img {
+      width: 7em;
+      height: 7em;  
+  }
+
   #opcoesBusca {
     width: 88%;
     margin: auto;
@@ -360,14 +339,7 @@ i:hover {
   .personagem h2 {
     font-size: 1em;
   }
-  .personagem-resposta-img {
-    width: 80%;
-    border-radius: 4em;
-  }
 
-  .personagem-resposta-desc {
-    font-size: 1em;
-  }
 
   #pag {
     margin: 1em 0;
@@ -395,6 +367,7 @@ i:hover {
     font-size: 8pt;
     height: 17em;
   }
+
 
   #informacoes {
     align-items: center;

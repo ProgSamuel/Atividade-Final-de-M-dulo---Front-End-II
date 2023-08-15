@@ -5,7 +5,9 @@ const opcoesBusca = document.getElementById("opcoesBusca");
 const homeDiv = document.getElementById("home");
 const pag = document.getElementById("pag");
 const numeroPa = document.getElementById("numero-pa");
+const apiLink = document.getElementById("api-link");
 let currentPage = 1;
+const body = document.body;
 
 // informações da API - quantidade
 axios
@@ -75,9 +77,9 @@ async function mostrarPersonagem(personagem) {
     
 
     resultado.innerHTML = `
-    <div class="personagem-resposta">
-    <img class="personagem-resposta-img" src="${personagem.image}" alt="${personagem.name}">
-    <div class="personagem-resposta-desc"> 
+    <div class="personagem">
+    <img class="personagem-imagem" src="${personagem.image}" alt="${personagem.name}">
+    <div class="personagem-dados"> 
     <h2>${personagem.name}</h2>
       <div class="status">
         <div class="exibirStatus" style="${estadoPersonagem}"></div>
@@ -274,3 +276,26 @@ document
   .addEventListener("click", carregarProximaPagina);
 
 carregarPersonagens(currentPage);
+
+// mudar tema
+// apiLink.addEventListener("click", ()=>{
+//   // trocar o backgroundColor de dark para ligth e vice versa
+//   document.body.style.setProperty("background-color", "var(--cor-gray-darker)");
+  
+
+// })
+
+
+  /* <body>
+
+<button id="toggleButton">Alternar Texto</button>
+<p id="hiddenText" class="hide">Este é um texto escondido.</p>
+
+<script>
+const toggleButton = document.getElementById("toggleButton");
+const hiddenText = document.getElementById("hiddenText");
+
+toggleButton.addEventListener("click", () => {
+  hiddenText.classList.toggle("hide");
+});
+</script> */
