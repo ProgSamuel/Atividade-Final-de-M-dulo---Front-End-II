@@ -1,9 +1,14 @@
 :root {
   --cor-primaria: #095513;
   --cor-secundaria: grey;
-  --cor-terciaria: rgb(219, 219, 208);
+  --cor-gray-light: rgb(219, 219, 208);
   --cor-footer: #1f2821;
   --cor-quarta: white;
+  --cor-terciaria: #f5f5f5;
+  --cor-gray-dark: #a9a9a9;
+  --cor-gray-drak2:  #333;
+  --cor-gray-darker: #696969;
+  --cor-list: #0f54e969;
   --tamanho-fonte: 16px;
 }
 
@@ -11,6 +16,10 @@ body {
   margin: 0;
   font-size: 12pt;
   min-height: 100vh;
+}
+
+*{
+  transition:cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
 #api-link {
@@ -38,13 +47,27 @@ header {
   flex-direction: column;
   margin-bottom: 2em;
 }
+#titulo{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+}
+header img{
+  width: 20%;
+  display: flex;
+  align-items: end;
+  bottom: 0;
+}
 
 header h1 {
   color: var(--cor-primaria);
-  font-size: 2.5em;
+  font-size: 2.8vw;
   font-weight: 900;
   text-align: center;
   flex-wrap: wrap;
+  margin-bottom: 0%;
 }
 
 input {
@@ -73,6 +96,7 @@ button {
   height: 94%;
   width: 90%;
   border-radius: inherit;
+  background-color: transparent !important;
 }
 
 #btnBuscar {
@@ -81,6 +105,7 @@ button {
   align-items: center;
   color: var(--cor-primaria);
   font-weight: 800;
+  background-color: transparent !important;
 }
 
 #resultadoDaBusca {
@@ -91,14 +116,20 @@ button {
   width: 70%;
   padding: 2.5% 5%;
   border-radius: 0.5em;
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 #opcoesBusca {
-  width: 50%;
+  width: 100%;
+}
+
+.opcao-busca:hover{
+  cursor: pointer;
+  border-radius: 0.5em;
+  background-color: var(--cor-list);
 }
 #resultado {
-  width: 50%;
+  width: 95%;
 }
 
 main img {
@@ -116,19 +147,18 @@ main img {
   display: flex;
   flex-direction: column;
   background-color: var(--cor-terciaria);
-  width: 21em;
+  width: 90%;
   height: 35em;
-  margin: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   padding: 1.2em;
   justify-content: start;
   border-radius: 1em;
   box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.1);
 }
 .personagem-resposta-img {
-  width: 88%;
-  height: 50%;
+  max-width: 90%;
+  min-width: 75%;
   margin: auto;
   border-radius: inherit;
 }
@@ -145,7 +175,7 @@ main img {
   font-weight: 800;
   color: var(--cor-primaria);
   text-align: center;
-  margin-top: -1em;
+  margin-top: -0.5em;
 }
 
 .personagem-resposta-desc p span {
@@ -238,7 +268,7 @@ footer span {
   display: flex;
   justify-content: center;
   padding-top: 2em;
-  gap: 5%;
+  gap: 8%;
   color: var(--cor-quarta);
 }
 
@@ -248,6 +278,10 @@ footer span {
   flex-direction: column;
   margin: auto;
   margin-top: 2%;
+}
+
+#desenvolvedor span:hover{
+font-size: 1.2em;
 }
 
 #redesSociais {
@@ -264,7 +298,7 @@ i {
 
 i:hover {
   font-size: 2.5em;
-  color: #12ADC5;
+  color: #12adc5;
 }
 
 #desenvolvedor p {
@@ -285,42 +319,70 @@ i:hover {
   background-color: var(--cor-secundaria);
 }
 
+@media (max-width: 480px) {
+  body {
+    font-size: 9pt;
+  }
 
-    /* 320px — 480px: dispositivos móveis */
-    @media screen and (min-width: 320px) and (max-width: 480px) {
-      body {
-        font-size: 8pt;
-      }
+  #resultadoDaBusca {
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+  }
+  #opcoesBusca {
+    width: 88%;
+    margin: auto;
+  }
 
-    /*   .personagem {
-        width: 100%;
-        height: 17em;
-        gap: 1em;
-        margin: auto;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        justify-content: center;
-        align-items: center;
-        
-      }
+  .personagem {
+    width: 100%;
+    height: 15em;
+  }
+  .personagem-resposta-img{
+    width: 80%;
+  }
+  .personagem-resposta-desc {
+    font-size: 1em;
+  }
 
-      .perssonagem img {
-        width: 10em;
-        height: 15em;
-      } */
-      
-     /*  .personagem-imagem {
-        width: 60%;
-        height: 100%;
-      } */
-    }
+  #pag {
+    margin: 1em 0;
+    gap: 1%;
+  }
 
+  #imagem-Rick-and-Morty {
+    margin-top: 7%;
+    margin-bottom: 7%;
+    width: 50%;
+  }
 
-    /* /* 481px — 768px: iPads, tablets */
-    @media screen and (min-width: 481px) and (max768px) {}
-    /* 769px — 1024px: telas pequenas, laptops */
-    @media screen and (min-width: 769px) and (max-width: 1024px) {}
-    /* 1025px — 1200px: desktops, telas grandes */
-    @media screen and (min-width: 1025px) and (max-width: 1200px) {} 
-    
+  #desenvolvedor {
+    margin-top: 7%;
+  }
+}
 
+@media (max-width: 360px) {
+  footer {
+    font-size: 8pt;
+    height: 17em;
+  }
+
+  #informacoes {
+    align-items: center;
+    flex-direction: column;
+    line-height: 0;
+  }
+
+  #desenvolvedor {
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  
+  #redesSociais {
+    margin: auto;
+    padding: 1em;
+    margin-top: 2%;
+  }
+
+}
