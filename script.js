@@ -139,6 +139,8 @@ function exibirOpcoesBusca(personagens) {
 }
 
 campoBusca.addEventListener("input", () => {
+  opcoesBusca.style.display = "block";
+  resultado.style.display = "none";
   const nomePersonagem = campoBusca.value.trim();
   if (!nomePersonagem) {
     opcoesBusca.innerHTML = "";
@@ -148,6 +150,12 @@ campoBusca.addEventListener("input", () => {
     buscarPersonagem(nomePersonagem);
   }
 });
+
+opcoesBusca.addEventListener("click", () => {
+  opcoesBusca.style.display = "none";
+  resultado.style.display = "block";
+  mostrarPersonagem();
+})
 
 // exibição dos personagens --------------------------------
 function criarElementoPersonagem(personagem, ultimoEpisodioName) {

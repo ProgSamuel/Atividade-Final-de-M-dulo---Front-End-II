@@ -6,7 +6,7 @@
   --cor-quarta: white;
   --cor-terciaria: #f5f5f5;
   --cor-gray-dark: #a9a9a9;
-  --cor-gray-drak2:  #333;
+  --cor-gray-drak2: #333;
   --cor-gray-darker: #696969;
   --cor-list: #0f54e969;
   --tamanho-fonte: 16px;
@@ -18,8 +18,8 @@ body {
   min-height: 100vh;
 }
 
-*{
-  transition:cubic-bezier(0.895, 0.03, 0.685, 0.22);
+* {
+  transition: cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
 #api-link {
@@ -48,14 +48,14 @@ header {
   flex-direction: column;
   margin-bottom: 2em;
 }
-#titulo{
+#titulo {
   display: flex;
   flex-direction: row;
   width: 80%;
   margin: auto;
   align-items: center;
 }
-header img{
+header img {
   width: 20%;
   display: flex;
   align-items: end;
@@ -125,13 +125,14 @@ button {
   width: 100%;
 }
 
-.opcao-busca:hover{
+.opcao-busca:hover {
   cursor: pointer;
   border-radius: 0.5em;
   background-color: var(--cor-list);
 }
 #resultado {
-  width: 95%;
+  width: 90%;
+  margin: auto;
 }
 
 main img {
@@ -147,10 +148,10 @@ main img {
 
 .personagem-resposta {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: var(--cor-terciaria);
-  width: 90%;
-  height: 35em;
+  /* width: 90%;
+  height: 35em; */
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 1.2em;
@@ -159,14 +160,13 @@ main img {
   box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.1);
 }
 .personagem-resposta-img {
-  max-width: 90%;
-  min-width: 75%;
   margin: auto;
+  width: 10em;
   border-radius: inherit;
 }
 
 .personagem-resposta-desc {
-  width: 88%;
+  max-width: 70%;
   margin: auto;
   font-size: 0.8em;
   font-weight: bold;
@@ -282,8 +282,8 @@ footer span {
   margin-top: 2%;
 }
 
-#desenvolvedor span:hover{
-font-size: 1.2em;
+#desenvolvedor span:hover {
+  font-size: 1.2em;
 }
 
 #redesSociais {
@@ -320,18 +320,26 @@ i:hover {
   border-radius: 50%;
   background-color: var(--cor-secundaria);
 }
+@media (max-width: 820px) {
+  .personagem-resposta {
+    font-size: 11pt;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 10px;
+  }
+}
 
 @media (max-width: 480px) {
   body {
     font-size: 9pt;
   }
 
-  header h1{
+  header h1 {
     width: 70%;
     font-size: 1.2em;
   }
 
-  header img{
+  header img {
     padding-top: 1em;
   }
 
@@ -349,9 +357,11 @@ i:hover {
     width: 100%;
     height: 15em;
   }
-  .personagem-resposta-img{
+  .personagem-resposta-img {
     width: 80%;
+    border-radius: 4em;
   }
+
   .personagem-resposta-desc {
     font-size: 1em;
   }
@@ -389,11 +399,10 @@ i:hover {
     margin-top: 1%;
     margin-bottom: 1%;
   }
-  
+
   #redesSociais {
     margin: auto;
     padding: 1em;
     margin-top: 2%;
   }
-
 }
