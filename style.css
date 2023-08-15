@@ -357,8 +357,8 @@ i:hover {
     width: 100%;
     height: 15em;
   }
-  .personagem h1 {
-    font-size: 1.2em;
+  .personagem h2 {
+    font-size: 1em;
   }
   .personagem-resposta-img {
     width: 80%;
