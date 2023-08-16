@@ -29,7 +29,7 @@ axios
     nloc.innerHTML = `${quantidadeLocalizacoes}`;
   })
   .catch((error) => {
-    console.error("Erro ao obter quantidade de localizações:", error);
+    console.error("Error getting number of locations:", error);
   });
 
 axios
@@ -40,7 +40,7 @@ axios
     nep.innerHTML = `${quantidadeEpisodios}`;
   })
   .catch((error) => {
-    console.error("Erro ao obter quantidade de episódios:", error);
+    console.error("Error getting number of episodes:", error);
   });
 
 // campo de pesquisa ----------------------------------------------------------------
@@ -51,8 +51,8 @@ async function buscarNomeUltimoEpisodio(urlEpisodio) {
     const ultimoEpisodio = response.data;
     return ultimoEpisodio.name;
   } catch (error) {
-    console.error("Erro ao obter detalhes do último episodio:", error);
-    return "Erro ao obter detalhes do episódio";
+    console.error("Error getting last episode details:", error);
+    return "Error getting episode details";
   }
 }
 
@@ -85,15 +85,15 @@ async function mostrarPersonagem(personagem) {
           ${personagem.status} - ${personagem.species}
           </p>
       </div>
-      <p> <span>Última localização conhecida:</span><br>${personagem.location.name}</p>
-      <p> <span>Visto pela última vez em:</span><br>${ultimoEpisodioName}</p>
+      <p> <span>Last Known Location:</span><br>${personagem.location.name}</p>
+      <p> <span>Last seen:</span><br>${ultimoEpisodioName}</p>
       </div> 
       </div>
     `;
     campoBusca.innerHTML = "";
   } catch (error) {
-    console.error("Erro ao mostrar personagem:", error);
-    resultado.innerHTML = "Ocorreu um erro ao mostrar o personagem.";
+    console.error("Error showing character:", error);
+    resultado.innerHTML = "An error occurred while displaying the character.";
   }
 }
 
@@ -108,14 +108,14 @@ function buscarPersonagem(nome) {
       if (personagens.length > 0) {
         mostrarPersonagem(personagens[0]);
       } else {
-        resultado.innerHTML = "Personagem não encontrado.";
+        resultado.innerHTML = "Character not found.";
       }
 
       exibirOpcoesBusca(personagens);
     })
     .catch((error) => {
-      console.error("Erro ao buscar personagem:", error);
-      resultado.innerHTML = "Ocorreu um erro ao buscar o personagem.";
+      console.error("Error fetching character:", error);
+      resultado.innerHTML = "An error occurred while fetching the character.";
     });
 }
 
@@ -183,8 +183,8 @@ function criarElementoPersonagem(personagem, ultimoEpisodioName) {
           ${personagem.status} - ${personagem.species}
           </p>
       </div>
-      <p> <span>Última localização conhecida:</span><br>${personagem.location.name}</p>
-      <p><span>Visto pela última vez em:</span><br>${ultimoEpisodioName}</p>
+      <p> <span> Last Known Location: </span><br>${personagem.location.name}</p>
+      <p><span> Last seen:</span><br>${ultimoEpisodioName}</p>
     `;
   imagemDiv.innerHTML = `<img src="${personagem.image}" alt="${personagem.name}">`;
 
@@ -211,7 +211,7 @@ async function buscarPersonagensPaginados(pageNumber) {
       },
     };
   } catch (error) {
-    console.error("Erro ao buscar personagens paginados:", error);
+    console.error("Error when fetching paginated characters:", error);
     return {
       personagens: [],
       info: {
@@ -237,7 +237,7 @@ async function carregarPersonagens(currentPage) {
       homeDiv.appendChild(personagemDiv);
     }
   } catch (error) {
-    console.error("Erro ao carregar personagens:", error);
+    console.error("Error loading characters:", error);
   }
 }
 
