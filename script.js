@@ -43,7 +43,7 @@ axios
     console.error("Erro ao obter quantidade de episódios:", error);
   });
 
-// campo de busca ----------------------------------------------------------------
+// campo de pesquisa ----------------------------------------------------------------
 
 async function buscarNomeUltimoEpisodio(urlEpisodio) {
   try {
@@ -74,8 +74,6 @@ async function mostrarPersonagem(personagem) {
         estadoPersonagem = "background-color: gray";
     }
 
-    
-
     resultado.innerHTML = `
     <div class="personagem">
     <img class="personagem-imagem" src="${personagem.image}" alt="${personagem.name}">
@@ -92,11 +90,7 @@ async function mostrarPersonagem(personagem) {
       </div> 
       </div>
     `;
-
-
     campoBusca.innerHTML = "";
-
-    // opcoesBusca.textContent = ""
   } catch (error) {
     console.error("Erro ao mostrar personagem:", error);
     resultado.innerHTML = "Ocorreu um erro ao mostrar o personagem.";
@@ -157,9 +151,9 @@ opcoesBusca.addEventListener("click", () => {
   opcoesBusca.style.display = "none";
   resultado.style.display = "block";
   mostrarPersonagem();
-})
+});
 
-// exibição dos personagens --------------------------------
+// exibição dos personagens na home --------------------------------
 function criarElementoPersonagem(personagem, ultimoEpisodioName) {
   const personagemDiv = document.createElement("div");
   const textoDiv = document.createElement("div");
@@ -281,12 +275,10 @@ carregarPersonagens(currentPage);
 // apiLink.addEventListener("click", ()=>{
 //   // trocar o backgroundColor de dark para ligth e vice versa
 //   document.body.style.setProperty("background-color", "var(--cor-gray-darker)");
-  
 
 // })
 
-
-  /* <body>
+/* <body>
 
 <button id="toggleButton">Alternar Texto</button>
 <p id="hiddenText" class="hide">Este é um texto escondido.</p>

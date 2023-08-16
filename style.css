@@ -22,7 +22,6 @@ verde => #0fb525
 --cor-secundaria =>   color:lemonchiffon;
 */
 
-
 body {
   margin: 0;
   font-size: 12pt;
@@ -301,8 +300,6 @@ i:hover {
   background-color: var(--cor-secundaria);
 }
 
-
-
 @media (max-width: 480px) {
   body {
     font-size: 9pt;
@@ -323,8 +320,8 @@ i:hover {
     width: 90%;
   }
   #resultadoDaBusca img {
-      width: 7em;
-      height: 7em;  
+    width: 7em;
+    height: 7em;
   }
 
   #opcoesBusca {
@@ -339,7 +336,6 @@ i:hover {
   .personagem h2 {
     font-size: 1em;
   }
-
 
   #pag {
     margin: 1em 0;
@@ -367,7 +363,6 @@ i:hover {
     font-size: 8pt;
     height: 17em;
   }
-
 
   #informacoes {
     align-items: center;
