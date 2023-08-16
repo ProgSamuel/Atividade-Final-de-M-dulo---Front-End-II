@@ -7,7 +7,7 @@ const pag = document.getElementById("pag");
 const numeroPa = document.getElementById("numero-pa");
 const apiLink = document.getElementById("api-link");
 let currentPage = 1;
-const body = document.body;
+// const body = document.body;
 
 // informações da API - quantidade
 axios
@@ -63,16 +63,16 @@ async function mostrarPersonagem(personagem) {
     );
 
     let estadoPersonagem = "";
-    switch (personagem.status) {
-      case "Alive":
-        estadoPersonagem = "background-color: green";
-        break;
-      case "Dead":
-        estadoPersonagem = "background-color: red";
-        break;
-      default:
-        estadoPersonagem = "background-color: gray";
-    }
+  switch (personagem.status) {
+    case "Alive":
+      estadoPersonagem = "background-color: #00FF00";
+      break;
+    case "Dead":
+      estadoPersonagem = "background-color: #FF0000";
+      break;
+    default:
+      estadoPersonagem = "background-color: #AAAAAA";
+  }
 
     resultado.innerHTML = `
     <div class="personagem">
@@ -162,13 +162,13 @@ function criarElementoPersonagem(personagem, ultimoEpisodioName) {
   let estadoPersonagem = "";
   switch (personagem.status) {
     case "Alive":
-      estadoPersonagem = "background-color: green";
+      estadoPersonagem = "background-color: #00FF00";
       break;
     case "Dead":
-      estadoPersonagem = "background-color: red";
+      estadoPersonagem = "background-color: #FF0000";
       break;
     default:
-      estadoPersonagem = "background-color: gray";
+      estadoPersonagem = "background-color: #AAAAAA";
   }
 
   personagemDiv.classList.add("personagem");
@@ -272,22 +272,17 @@ document
 carregarPersonagens(currentPage);
 
 // mudar tema
-// apiLink.addEventListener("click", ()=>{
-//   // trocar o backgroundColor de dark para ligth e vice versa
-//   document.body.style.setProperty("background-color", "var(--cor-gray-darker)");
 
-// })
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+personagem = document.querySelectorAll(".personagem");
 
-/* <body>
-
-<button id="toggleButton">Alternar Texto</button>
-<p id="hiddenText" class="hide">Este é um texto escondido.</p>
-
-<script>
-const toggleButton = document.getElementById("toggleButton");
-const hiddenText = document.getElementById("hiddenText");
-
-toggleButton.addEventListener("click", () => {
-  hiddenText.classList.toggle("hide");
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-theme"); 
 });
-</script> */
+
+window.addEventListener("load", () => {
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-theme");
+  }
+});

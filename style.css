@@ -1,36 +1,18 @@
 :root {
   --cor-primaria: #095513;
   --cor-secundaria: grey;
-  --cor-gray-light: rgb(219, 219, 208);
   --cor-footer: #1f2821;
+  --cor-toggle:  #121212;
   --cor-quarta: white;
   --cor-terciaria: #f5f5f5;
-  --cor-gray-dark: #a9a9a9;
-  --cor-gray-drak2: #333;
-  --cor-gray-darker: #696969;
-  --cor-list: #0f54e969;
-  --tamanho-fonte: 16px;
-  --cor-bege: lemonchiffon;
-  --cor-transparente: transparent;
 }
-
-/* modo dark
-background-color: var(--cor-gray-darker)
-.personagem => var(--cor-gray-drak2)
-color: var(--cor-quarta)
-verde => #0fb525
---cor-secundaria =>   color:lemonchiffon;
-*/
 
 body {
   margin: 0;
   font-size: 12pt;
   min-height: 100vh;
   background-color: transparent;
-}
-
-* {
-  transition: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #api-link {
@@ -86,6 +68,8 @@ header h1 {
 input {
   border: none;
   outline: none;
+  color: inherit;
+  font-size: inherit;
 }
 
 button {
@@ -381,4 +365,31 @@ i:hover {
     padding: 1em;
     margin-top: 2%;
   }
+}
+
+/* Estilos para o tema dark */
+.dark-theme {
+  background-color: #262626;
+  color: var(--cor-quarta);
+  --cor-primaria: #00FF00;
+  --cor-terciaria: #292929;
+  --cor-secundaria: lemonchiffon;
+  --cor-toggle: #eeeeee;
+}
+
+#theme-toggle {
+  color: var(--cor-toggle);
+  font-size: 2em;
+  margin-left: calc(100vw - 2.5em);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+#theme-toggle:hover {
+  font-size: 2.1em;
+  color:inherit;
+}
+
+#theme-toggle.rotate {
+  transform: rotate(180deg);
 }
