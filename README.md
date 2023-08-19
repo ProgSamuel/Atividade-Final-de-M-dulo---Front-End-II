@@ -1,43 +1,43 @@
-**Aplicativo Web da API Rick and Morty**
+**Rick and Morty API Web App**
 
-Este é um aplicativo web simples que utiliza a API Rick and Morty para exibir informações sobre personagens, locais e episódios da famosa série de TV "Rick and Morty". O aplicativo permite pesquisar por personagens, navegar por diferentes páginas de personagens e alternar entre temas claro e escuro para uma experiência de usuário melhor.
+This is a simple web application that utilizes the Rick and Morty API to display information about characters, locations, and episodes from the famous TV series "Rick and Morty". The app allows you to search for characters, navigate through different character pages, and switch between light and dark themes for a better user experience.
 
-### Recursos
+### Features
 
-1. **Exibição de Informações do Personagem**: O aplicativo busca dados da API Rick and Morty para exibir informações sobre personagens, incluindo seu nome, status, espécie, última localização conhecida e o último episódio em que apareceram.
+1. **Character Information Display**: The app fetches data from the Rick and Morty API to showcase details about characters, including their name, status, species, last known location, and the last episode they appeared in.
 
-2. **Funcionalidade de Busca**: Você pode usar a barra de busca para pesquisar por um personagem específico pelo nome. O aplicativo exibirá personagens correspondentes e seus detalhes. Você pode clicar no nome de um personagem nos resultados da pesquisa para ver mais detalhes sobre ele.
+2. **Search Functionality**: You can use the search bar to look up a specific character by name. The app will display matching characters along with their details. Clicking on a character's name in the search results will provide more in-depth information about them.
 
-3. **Paginação**: O aplicativo suporta paginação para navegar por diferentes páginas de personagens. Você pode ir para as páginas anterior e seguinte para ver mais personagens.
+3. **Pagination**: The app supports pagination to navigate through different pages of characters. You can navigate to the previous and next pages to view more characters.
 
-4. **Alternância de Tema Escuro**: O aplicativo oferece um tema escuro para uma experiência visual confortável em condições de pouca luz. Você pode alternar entre os temas claro e escuro usando o botão de alternância de tema.
+4. **Dark Theme Toggle**: The app offers a dark theme for a comfortable visual experience in low-light conditions. You can switch between light and dark themes using the theme toggle button.
 
-### Como Usar
+### How to Use
 
-1. Abra o aplicativo web em um navegador.
-2. Use a barra de busca para inserir o nome de um personagem e pressione Enter ou clique no ícone de busca.
-3. Os resultados da pesquisa serão exibidos abaixo. Clique no nome de um personagem para ver suas informações detalhadas.
-4. Navegue por diferentes páginas de personagens usando os botões de paginação.
-5. Alterne entre os temas claro e escuro clicando no botão de alternância de tema localizado no topo.
+1. Open the web application in a browser.
+2. Use the search bar to input a character's name and press Enter or click the search icon.
+3. The search results will be displayed below. Click on a character's name to view their detailed information.
+4. Navigate through different character pages using the pagination buttons.
+5. Toggle between light and dark themes by clicking the theme toggle button located at the top.
 
-### Tecnologias Utilizadas
+### Technologies Used
 
-- HTML: Estruturação da página web.
-- CSS: Estilização da página web, incluindo o tema escuro.
-- JavaScript: Busca de dados da API e manipulação de interações do usuário.
-- Axios: Realização de requisições à API.
-- API Rick and Morty: Fonte de dados de personagens, locais e episódios.
+- HTML: Web page structure.
+- CSS: Styling of the web page, including the dark theme.
+- JavaScript: API data retrieval and user interaction handling.
+- Axios: API requests handling.
+- Rick and Morty API: Source of character, location, and episode data.
 
-### Como Executar Localmente
+### How to Run Locally
 
-1. Clone este repositório para a sua máquina local.
-2. Abra o arquivo `index.html` em um navegador web.
+1. Clone this repository to your local machine.
+2. Open the `index.html` file in a web browser.
 
-### Contribuidores
+### Contributors
 
 [Samuel Ramos](https://github.com/ProgSamuel)
 
-**Acesso ao site:** 
-[Link para o Aplicativo](https://progsamuel-rickandmorty.netlify.app/)
+**Website Access:** 
+[Link to the App](https://progsamuel-rickandmorty.netlify.app/)
 
-Sinta-se à vontade para modificar, aprimorar ou contribuir para este projeto. Divirta-se explorando os personagens de "Rick and Morty"!
+Feel free to modify, enhance, or contribute to this project. Enjoy exploring the world of "Rick and Morty" characters!
